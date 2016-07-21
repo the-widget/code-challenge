@@ -33,10 +33,18 @@ class CyrusCodeChallenge::CLI
     puts
     
     puts "Output 2:", ""
-    sorted = Contacts.all.sort_by{|contact| [contact.birth_date.split("/")[2], contact.last_name]} # Method to sort birth_date works, but is not legit.
+    sorted = Contacts.all.sort_by{|contact| [contact.birth_date.split("/")[2], contact.last_name]} # Method to sort birth_date works, but is not legit. Sorts only by year.
     sorted.each do |contact|
       puts "#{contact.last_name} #{contact.first_name} #{contact.gender} #{contact.birth_date} #{contact.favorite_color}"
     end
+    puts
+    
+    puts "Output 3:", ""
+    sorted = Contacts.all.sort{|a,b| b.last_name <=> a.last_name}
+    sorted.each do |contact|
+      puts "#{contact.last_name} #{contact.first_name} #{contact.gender} #{contact.birth_date} #{contact.favorite_color}"
+    end
+    puts
   end
 end
 
