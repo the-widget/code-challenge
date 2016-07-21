@@ -26,10 +26,10 @@ class CyrusCodeChallenge::CLI
     end
     
     puts "Output 1:", ""
-    Contacts.all.each do |contact|
+    sorted = Contacts.all.sort_by{|contact| [contact.gender, contact.last_name]}
+    sorted.each do |contact|
       puts "#{contact.last_name} #{contact.first_name} #{contact.gender} #{contact.birth_date} #{contact.favorite_color}"
     end
-    puts
   end
 end
 
