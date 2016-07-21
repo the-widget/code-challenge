@@ -1,4 +1,2 @@
 #!/usr/bin/env ruby
 require_relative '../lib/cyrus-code-challenge'
-
-CyrusCodeChallenge::CLI.new
