@@ -1,6 +1,8 @@
 require 'date'
+
 class CommaContacts < Contacts
   attr_accessor :last_name, :first_name, :gender, :favorite_color, :birth_date
+
   def initialize(last_name, first_name, gender, favorite_color, birth_date)
     @last_name = last_name
     @first_name = first_name

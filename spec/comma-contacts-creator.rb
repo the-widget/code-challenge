@@ -1,10 +1,11 @@
-require_relative "../lib/version"
+require_relative "../lib/cyrus-code-challenge"
 
-describe '.comma comma-contacts-creator' do
+describe '.comma-contacts-creator' do
   CommaContactsCreator.new.create
 
   it 'creates contacts' do
     expect(Contacts.all.length).to eq(3)
+    expect(Contacts.all[0].first_name).to eq("Neil")
   end
 
   it 'formats birth_date to Date class' do
