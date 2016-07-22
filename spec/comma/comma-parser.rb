@@ -1,4 +1,4 @@
-require_relative "../lib/cyrus-code-challenge"
+require_relative "../../lib/cyrus-code-challenge"
 
 describe 'input_files' do
   it 'inputs correctly formated data' do

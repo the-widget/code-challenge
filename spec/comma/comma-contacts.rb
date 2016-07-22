@@ -1,4 +1,4 @@
-require_relative "../lib/cyrus-code-challenge"
+require_relative "../../lib/cyrus-code-challenge"
 
 describe '.comma contacts' do
   contact = CommaContacts.new("Abercrombie", "Neil", "Male", "Tan", "2/13/1943")

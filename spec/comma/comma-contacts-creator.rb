@@ -1,4 +1,4 @@
-require_relative "../lib/cyrus-code-challenge"
+require_relative "../../lib/cyrus-code-challenge"
 
 describe '.comma-contacts-creator' do
   CommaContactsCreator.new.create
