@@ -11,5 +11,4 @@ describe '.comma-contacts-creator' do
   it 'formats birth_date to Date class' do
     expect(Contacts.all[0].birth_date).to be_an_instance_of(Date)
   end
-
 end

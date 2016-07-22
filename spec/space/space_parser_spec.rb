@@ -10,7 +10,7 @@ describe 'input_files' do
 end
 
 describe '.space parser' do
-  test_data = PipeParser.new("lib/input_files/space.txt").parse
+  test_data = SpaceParser.new("lib/input_files/space.txt").parse
   
   it 'parses into correct number of contacts' do
     expect(test_data.size).to eq(3)
