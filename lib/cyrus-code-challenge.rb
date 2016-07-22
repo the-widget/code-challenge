@@ -1,4 +1,5 @@
 require_relative './printer'
+require_relative './cli'
 require_relative '../lib/contacts'
 require_relative '../lib/comma/comma-parser'
 require_relative '../lib/comma/comma-contacts'
