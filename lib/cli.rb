@@ -1,17 +1,14 @@
 class CLI
+  include CLIHelpers
 
   def initialize
     @printer = Printer.new
     greeting
   end
-
-  def animate
-    sleep 0.01
-  end
   
   def greeting
     array = "\nWelcome to Brennen's Cyrus Code Challenge Solution!\n".split("")
-    array.each{|x| print x;animate}
+    array.each{|x| print green(x);animate}
     sleep 0.6
     show_options
   end
@@ -28,33 +25,40 @@ class CLI
     input = gets.strip
     case input.to_i
     when 1
-      print "------------------------------------------\n"
+      clear;print "------------------------------------------\n"
       @printer.output_1
       print "------------------------------------------"
     when 2
-      print "------------------------------------------\n"
+      clear;print "------------------------------------------\n"
       @printer.output_2
       print "------------------------------------------"
     when 3
-      print "------------------------------------------\n"
+      clear;print "------------------------------------------\n"
       @printer.output_3
       print "------------------------------------------"
     when 4
-      print "------------------------------------------\n"
+      clear;print "------------------------------------------\n"
       @printer.print_all
       print "------------------------------------------"
+    else
+      puts red('Please choose a valid selection:')
+      respond
     end
+    puts green("\nWould you like to make another selection? (y/n)")
     offer_another_selection
   end
   
   def offer_another_selection
-    puts "\nWould you like to make another selection? (y/n)"
     input = gets.strip
     if input == "y" || input == "Y"
       show_options 
     elsif input == "n" || input == "N"
-      abort("Bye for now!")
+      abort("\nBye for now!")
+    else
+      puts red('Please choose a valid selection:')
+      offer_another_selection
     end
   end
 
 end
+
