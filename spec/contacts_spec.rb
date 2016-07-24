@@ -1,3 +1,5 @@
+## THIS SPEC PASSES ONLY WHEN RUN BY ITSELF, NOT IN SUITE ##
+
 # require_relative "../lib/cyrus-code-challenge"
 # describe '.contacts' do
   
