@@ -6,7 +6,6 @@ module Formatter
     delete_middle_name(contact)
     switch_dates(contact)
     spell_gender(contact)
-    
     contact
   end
 
@@ -33,5 +32,4 @@ module Formatter
       contact
     end
   end
-
 end

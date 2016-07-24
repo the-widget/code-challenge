@@ -33,6 +33,16 @@ If you prefer to execute without using the CLI:
 
       $ ruby bin/test-output
 
+## Testing
+
+Navigate to the root directory and run:
+
+    $ rspec spec
+
+Currently, the contacts_spec.rb only passes when run independently. To run this test, uncomment the entire file and run:
+
+    $ rspec spec/contacts_spec.rb
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

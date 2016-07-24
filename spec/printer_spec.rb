@@ -34,4 +34,3 @@ describe '.printer' do
   end
 
 end
-

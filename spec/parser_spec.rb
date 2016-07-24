@@ -38,4 +38,3 @@ describe '.parser' do
     .to eq(["Abercrombie", "Neil", "Male", "Tan", "2/13/1943"])
   end
 end
-

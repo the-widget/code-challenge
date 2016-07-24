@@ -1,1 +1,0 @@
-- fix Rspec tests to run individually and collectively
