@@ -11,7 +11,6 @@ describe '.printer' do
     $stdout = STDOUT
   end
   
-  ContactsCreator.new.create
   printer = Printer.new
 
   it 'prints output_1 correctly' do

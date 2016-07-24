@@ -1,7 +1,6 @@
 require_relative "../lib/cyrus-code-challenge"
 
 describe '.contacts-creator' do
-  ContactsCreator.new.create
 
   it 'creates all contacts' do
     expect(Contacts.all.length).to eq(9)
