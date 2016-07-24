@@ -1,5 +1,3 @@
-require_relative "./cyrus-code-challenge"
-
 class Printer
   def intialize
   end
