@@ -1,4 +1,5 @@
 class Parser
+  include Formatter
 
   def initialize(file_path)
     @file_path = file_path
@@ -7,6 +8,8 @@ class Parser
   def parse
     file = File.open(@file_path)
     contents = file.read
-    contents.split("\n").map{|content| content.gsub(/[,]|[|]/, "").split(" ")}
+    array = contents.split("\n").map do |content|
+      normalize(content)
+    end
   end
 end
