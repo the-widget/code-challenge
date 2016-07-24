@@ -35,7 +35,7 @@ module CLIHelpers
       @printer.print_all
       print "------------------------------------------"
     when "exit", "quit", "end", "q"
-      abort
+      abort("\nBye for now!")
     else
       puts red('Please choose a valid selection:')
       respond_to_input

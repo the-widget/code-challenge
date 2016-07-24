@@ -30,9 +30,10 @@ class CyrusCodeChallenge::CLI
   
   def offer_another_selection
     input = gets.strip
-    if input == "y" || input == "Y"
+    case input
+    when "y", "Y"
       show_options 
-    elsif input == "n" || input == "N"
+    when "n", "N", "exit", "quit"
       abort("\nBye for now!")
     else
       puts red('Please choose a valid selection:')
