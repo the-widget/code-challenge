@@ -1,10 +1,7 @@
 require_relative "./cyrus-code-challenge"
 
 class Printer
-  def initialize
-    CommaContactsCreator.new.create
-    PipeContactsCreator.new.create
-    SpaceContactsCreator.new.create
+  def intialize
   end
 
   def print_all

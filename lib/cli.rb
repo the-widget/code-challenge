@@ -2,6 +2,7 @@ class CLI
   include CLIHelpers
 
   def initialize
+    ContactsCreator.new.create
     @printer = Printer.new
     greeting
   end
