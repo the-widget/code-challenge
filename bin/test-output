@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 require_relative '../lib/cyrus-code-challenge.rb'
 
-CyrusCodeChallenge::CLI.new
+ContactsCreator.call
+Printer.new.print_all

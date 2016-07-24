@@ -1,8 +1,8 @@
-class CLI
+class CyrusCodeChallenge::CLI
   include CLIHelpers
 
   def initialize
-    ContactsCreator.new.create
+    ContactsCreator.call
     @printer = Printer.new
     greeting
   end

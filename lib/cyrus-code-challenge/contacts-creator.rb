@@ -1,5 +1,5 @@
 class ContactsCreator
-  def create
+  def self.call
     Dir.glob("lib/input_files/*.txt") do |txt_file|
       contacts_info = Parser.new(txt_file).parse
       contacts_info.each do |contact|
