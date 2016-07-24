@@ -9,7 +9,7 @@ describe '.parser' do
 
   it 'parses the data correctly' do 
     expect(space_test_data[0])
-    .to eq(["Kournikova", "Anna", "F", "F", "6-3-1975", "Red"])
+    .to eq(["Kournikova", "Anna", "Female", "Red", "6/3/1975"])
   end
 end
 
@@ -22,7 +22,7 @@ describe '.parser' do
 
   it 'parses the data correctly' do 
     expect(pipe_test_data[0])
-    .to eq(["Smith", "Steve", "D", "M", "Red", "3-3-1985"])
+    .to eq(["Smith", "Steve", "Male", "Red", "3/3/1985"])
   end
 end
 
