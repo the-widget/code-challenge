@@ -17,7 +17,14 @@ class CyrusCodeChallenge::CLI
   def show_options
     array = "Please choose an option:".split("")
     array.each{|x| print x;animate};sleep 0.6
-    array = "\n\n1. Print Output 1\n2. Print Output 2\n3. Print Output 3\n4. Print Entire Solution\n".split("")
+    array = 
+      %{\n
+      1. Print Output 1
+      2. Print Output 2
+      3. Print Output 3
+      4. Print Entire Solution
+      }.split("") #TODO: 5. Add New Contact
+        
     array.each{|x| print x;animate}
     serve_user
   end
