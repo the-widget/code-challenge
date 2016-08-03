@@ -23,7 +23,8 @@ class CyrusCodeChallenge::CLI
       2. Print Output 2
       3. Print Output 3
       4. Print Entire Solution
-      }.split("") #TODO: 5. Add New Contact
+      5. Email Entire Solution
+      }.split("") 
         
     array.each{|x| print x;animate}
     serve_user
@@ -67,6 +68,12 @@ class CyrusCodeChallenge::CLI
       clear;print "------------------------------------------\n"
       @printer.print_all
       print "------------------------------------------"
+    when "5"
+      puts "Who should I send this email to?"
+      receiver = gets.strip
+      email_sender = EmailSender.new(@printer.email_all, receiver)
+      email_sender.send_email
+      clear;print "Your email was successfully sent to:\n#{receiver}\n"
     when "exit", "quit", "end", "q"
       abort("\nBye for now!")
     else
