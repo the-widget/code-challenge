@@ -35,9 +35,9 @@ class EmailSender
     end
   
     Mail.deliver do
-      to      'brennen.awana@gmail.com'
-      from    "#{receiver}"
-      subject 'testing MailGem5'
+      to      "#{receiver}"
+      from    'brennenawana108ny@gmail.com'
+      subject 'Cyrus Code Challenge: Solution'
       html_part do 
         content_type 'text/html; charset=UTF-8'
         body "<p>#{content}</p>"
