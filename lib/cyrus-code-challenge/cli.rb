@@ -71,6 +71,10 @@ class CyrusCodeChallenge::CLI
     when "5"
       puts "Who should I send this email to?"
       receiver = gets.strip
+      until receiver =~ /.+@.+\..+/i
+        puts "Please enter valid email address:"
+        receiver = gets.strip
+      end
       email_sender = EmailSender.new(@printer.email_all, receiver)
       email_sender.send_email
       clear;print "Your email was successfully sent to:\n#{receiver}\n"
