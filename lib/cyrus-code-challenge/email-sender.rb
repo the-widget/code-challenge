@@ -44,13 +44,5 @@ class EmailSender
       end
     end
   end
-  
 
 end
-
-
-
-
-
-
-
